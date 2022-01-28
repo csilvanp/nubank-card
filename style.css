@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #AB59D4;
+  --secondary: #6E0B8B;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+  display: flex;
+  width: 500px;
+  height: 330px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-inner.is-flipped{
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 20px 20px 50px;
+  border-radius: 20px;
+  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+}
+
+.mastercard {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.mastercard-logo {
+  width: 25%;
+}
+
+.chip-img {
+  width: 15%;
+}
+
+.wave-img {
+  width: 5%;
+  margin-left: 20px;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+}
+
+.nubank-logo {
+  width: 18%;
+}
+
+.infos-logo {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.infos-logo span {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.back {
+  width: 100%;
+  border-radius: 20px;
+  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+  transform: rotateY(180deg);
+}
+
+.top {
+  width: 100%;
+  height: 8%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+}
+
+.top span {
+  font-size: 7px;
+}
+
+.stripe {
+  width: 100%;
+  height: 20%;
+  background-color: #CECECE;
+}
+
+.below-stripe {
+  height: 72%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 25px;
+}
+
+.business-info {
+  display: flex;
+}
+
+.card-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.platinum {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.platinum span {
+  font-size: 20px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.platinum img {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.sac {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  justify-content: space-between;
+}
+
+.precisa-ajuda, .contatos-ajuda, .ouvidoria, .contatos {
+  display: flex;
+  font-size: 8px;
+  color: white;
+}
+
+.precisa-ajuda-text, .contatos-ajuda-text, .ouvidoria-text, .global-service, .outside-brazil {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.precisa-ajuda i {
+  font-size: 25px;
+  transform: rotateY(180deg);
+  margin-right: 10px;
+}
+
+.precisa-ajuda strong {
+  letter-spacing: 0.3px;
+}
+
+.contatos-ajuda i {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.ouvidoria {
+  margin-left: 35px;
+}
+
+.ouvidoria span {
+  margin-top: 2px;
+}
+
+.contatos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+  margin-left: 30px;
+}
+.contatos strong {
+  margin-top: 2px;
+  letter-spacing: 1px;
+}
+
+.outside-brazil {
+  margin-top: 15px;
+}
+
+.content {
+  height: 70%;
+  margin-left: 10px;
+}
+
+.card-number {
+  display: flex;
+}
+
+.card-number span {
+  font-size: 22px;
+  margin-right: 10px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.card-dates{
+  display: flex;
+  margin-top: 10px;
+}
+
+.card-dates div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 17px;
+}
+
+.card-dates div span {
+  color: white;
+  text-transform: uppercase;
+  font-size: 5px;
+}
+
+.card-dates div strong {
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-left: 8px;
+  letter-spacing: 1px;
+}
+
+.cirrus-logo {
+  height: 30%;
+}
+
+.cirrus-logo img {
+  height: 100%;
+}
